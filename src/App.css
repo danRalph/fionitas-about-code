@@ -4,10 +4,10 @@
 
 html, body {
     font-family: 'Roboto', sans-serif;
-    margin-top: 0;
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .App {
@@ -32,11 +32,14 @@ html, body {
 }
 .image-about {
   height: 522px;
-  width: 1070px;
+  width: 80%;
   background-image: url('./images/colours.jpg');
   position: absolute;
-  top: 275px;
-  left: 160px;
+  top: 45%;
+  left: 10%;
+}
+.image-about-mob {
+  display: none;
 }
 
 .our-team{
@@ -67,12 +70,15 @@ html, body {
   padding-top: 10px;
   padding-left: 14px;
 }
-.caro {
+.caro-mobile {
+  display: none;
+}
+.caro-desktop {
   padding-top: 97px;
   padding-left: 332px;
   padding-right: 80px;
 }
-.caro a {
+.caro-desktop a {
   text-decoration: none;
   color: black;
   font-size: 14px;
@@ -95,8 +101,10 @@ html, body {
 }
 
 .our-story {
-  height: 1266px;
+  position: relative;
+  height: 100%;
   background-color: #FFE6F0;
+  padding-bottom: 4em;
 }
 .our-story h1 {
   font-size: 48px;
@@ -127,41 +135,161 @@ html, body {
   height: 340px;
   width: 339px;
   position: absolute;
-  left: 889px;
-  top: 2100px;
+  left: 66%;
+  top: 25.3%;
   background: white;
   box-shadow: 5px 5px 5px gray;
 }
 .arrow-1 {
   position: absolute;
-  top: 2100px;
-  left: 786px;
+  top: 25.3%;
+  left: 58.4%;
 }
 .storyBox-2 {
   height: 340px;
   width: 339px;
   position: absolute;
-  left: 138px;
-  top: 2400px;
+  left: 10.2%;
+  top: 48.3%;
   background: white;
   box-shadow: 5px 5px 5px gray;
 }
 .arrow-2 {
   position: absolute;
-  top: 2400px;
-  left: 477px;
+  top: 48.3%;
+  left: 35.3%;
 }
 .storyBox-3 {
   height: 340px;
   width: 339px;
   position: absolute;
-  left: 889px;
-  top: 2580px;
+  left: 66%;
+  top: 62%;
   background: white;
   box-shadow: 5px 5px 5px gray;
 }
 .arrow-3 {
   position: absolute;
-  top: 2580px;
-  left: 787px;
+  top: 62%;
+  left: 58.5%;
+}
+.arrow-mob1,
+.arrow-mob2,
+.arrow-mob3 {
+  display: none;
+}
+
+
+
+@media screen and (max-device-width: 480px) {
+
+.color-block {
+  height: 18em;
+}
+.color-block h1 {
+  font-size: 46px;
+}
+.image-about {
+  display: none;
+}
+.image-about-mob {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  background-image: url('./images/colours-mob.jpg');
+}
+
+.our-team {
+  padding-top: 4em;
+  height: 100%;
+  width: 100%;
+}
+.our-team h1 {
+  font-size: 46px;
+  padding: 0;
+  text-align: center;
+}
+.caro-mobile {
+  display: block; 
+  padding-left: 70px;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+.caro-mobile a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  padding-left: 13px;
+}
+.caro-desktop {
+  display: none;
+}
+.backButton,
+.nextButton {
+  display: none;
+}
+
+
+.our-story h1 {
+  font-size: 44px;
+}
+.our-story h2 {
+  font-size: 18px;
+}
+.our-story p {
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 8px;
+}
+.line {
+  justify-content: left;
+  margin-left: 2em;
+}
+.storyBox-1 {
+  height: 270px;
+  width: 250px;
+  left: 5em;
+  top: 17em;
+}
+.arrow-1 {
+  display: none;
+}
+.storyBox-2 {
+  height: 240px;
+  width: 250px;
+  left: 5em;
+  top: 35em;
+}
+.arrow-2 {
+  display: none;
+}
+.storyBox-3 {
+  height: 270px;
+  width: 250px;
+  left: 5em;
+  top: 52em;
+}
+.arrow-3 {
+  display: none;
+}
+.arrow-mob1 {
+  display: flex;
+  position: absolute;
+  left: 2.6em;
+  top: 22em;
+}
+.arrow-mob2 {
+  display: flex;
+  position: absolute;
+  left: 3em;
+  top: 41em;
+}
+.arrow-mob3 {
+  display: flex;
+  position: absolute;
+  left: 3em;
+  top: 52em;
+}
+
 }

@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
+import ARROW from '../images/arrow.png';
 import May from '../images/May.jpg';
 
 
@@ -14,11 +15,12 @@ export default function About () {
                 <h1 data-aos="fade-up" data-aos-delay="400">About us</h1>
             </div>
             <div className="image-about" data-aos="fade-in" data-aos-delay="700"></div>
+            <div className="image-about-mob" data-aos="fade-in" data-aos-delay="700"></div>
+
             <div className="our-team">
                 <h1 data-aos="fade-up" data-aos-delay="400"><span>Our</span> Team</h1>
 
-            <div className="caro">
-            
+            <div className="caro-desktop">            
                     <CarouselProvider
                         naturalSlideWidth={80}
                         naturalSlideHeight={145}
@@ -99,9 +101,92 @@ export default function About () {
                         </Card>
                         </Slide>
                         </Slider>
-                    </CarouselProvider>
+                    </CarouselProvider>                      
+                 </div>
 
-                        
+
+                 <div className="caro-mobile">            
+                    <CarouselProvider
+                        naturalSlideWidth={50}
+                        naturalSlideHeight={70}
+                        totalSlides={6}
+                        visibleSlides={1}
+                    >
+                        <ButtonBack className="backButton"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1.5" y="1.5" width="77" height="77" rx="18.5" fill="white" stroke="#FF0066" stroke-width="3"/>
+                                                            <line x1="52.3356" y1="18.2858" x2="29.7856" y2="40.8357" stroke="#FF0066" stroke-width="3"/>
+                                                            <line x1="49.4891" y1="63.6106" x2="26.9392" y2="41.0606" stroke="#FF0066" stroke-width="3"/>
+                                                        </svg>
+                        </ButtonBack>
+                        <ButtonNext className="nextButton"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="78.5" y="78.5" width="77" height="77" rx="18.5" transform="rotate(-180 78.5 78.5)" fill="white" stroke="#FF0066" stroke-width="3"/>
+                                                            <line x1="27.6644" y1="61.7142" x2="50.2144" y2="39.1643" stroke="#FF0066" stroke-width="3"/>
+                                                            <line x1="30.5109" y1="16.3894" x2="53.0608" y2="38.9394" stroke="#FF0066" stroke-width="3"/>
+                                                        </svg>
+                        </ButtonNext>
+                        <Slider>
+                        <Slide className="slides" index={0}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top"  style={{ width: '270px', height: '270px', background: 'black' }} />
+                            <Card.Body>
+                                <Card.Title>Fiona Igwe</Card.Title>
+                                <p>CEO / Founder</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        <Slide index={1}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top" src={May} style={{ width: '270px', height: '270px' }} />
+                            <Card.Body>
+                                <Card.Title>May Showumi</Card.Title>
+                                <p>Head of Technology</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        <Slide index={2}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top"  style={{ width: '270px', height: '270px', background: 'black'}} />
+                            <Card.Body>
+                                <Card.Title>Daniel Cahalane</Card.Title>
+                                <p>Volunteer Developer</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        <Slide index={3}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top"  style={{ width: '270px', height: '270px', background: 'black' }} />
+                            <Card.Body>
+                                <Card.Title>Full Name</Card.Title>
+                                <p>Position</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        <Slide index={4}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top"  style={{ width: '270px', height: '270px', background: 'black' }} />
+                            <Card.Body>
+                                <Card.Title>Full Name</Card.Title>
+                                <p>Position</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        <Slide index={5}>
+                        <Card className="cards" style={{ width: '270px', height: '436px' }}>
+                            <Card.Img variant="top"  style={{ width: '270px', height: '270px', background: 'black' }} />
+                            <Card.Body>
+                                <Card.Title>Full Name</Card.Title>
+                                <p>Position</p>
+                                <a href="">See More ></a>
+                            </Card.Body>
+                        </Card>
+                        </Slide>
+                        </Slider>
+                    </CarouselProvider>                      
                  </div>
             </div>
                 
@@ -127,6 +212,7 @@ export default function About () {
                     <path d="M100.5 95.1233L3.49325 49L100.5 2.87669L100.5 95.1233Z" fill="#FF0066" stroke="#FF0066" stroke-width="3"/>
                     </svg>
                  </div>
+                 <div className="arrow-mob1" data-aos="fade-right" data-aos-delay="900"><img src={ARROW} /></div>
 
                  <div className="storyBox-2" data-aos="fade-right" data-aos-delay="1100">
                      <h2>Heading</h2>
@@ -137,6 +223,7 @@ export default function About () {
                     <path d="M102 49L0 97.4974L0 0.502579L102 49Z" fill="#FF0066"/>
                     </svg>
                  </div>
+                 <div className="arrow-mob2" data-aos="fade-right" data-aos-delay="900"><img src={ARROW} /></div>
 
                  <div className="storyBox-3" data-aos="fade-left" data-aos-delay="1500">
                      <h2>Heading</h2>
@@ -147,6 +234,7 @@ export default function About () {
                     <path d="M100.5 95.1233L3.49325 49L100.5 2.87669L100.5 95.1233Z" fill="#FF0066" stroke="#FF0066" stroke-width="3"/>
                     </svg>
                  </div>
+                 <div className="arrow-mob3" data-aos="fade-right" data-aos-delay="900"><img src={ARROW} /></div>
             </div>
         </div>
     );
